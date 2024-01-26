@@ -1,4 +1,4 @@
-#Datatype
+# Datatype
 
 - boolean → true / false
 - null → “값이 없음”이 값 그 자체. 값이 있는데 없는 그런거…뜨거운 아아…뭐 그런거..
