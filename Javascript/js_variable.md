@@ -1,4 +1,4 @@
-#Variable
+# Variable
 
 - const(상수) or let(변화 가능) / var은 딱히 특징 없는 오래된 것(사용비추)
 - let은 처음 변수 생성에만 사용 → 업데이트 시 let 쓰지 않고 작성
