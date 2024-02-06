@@ -125,3 +125,92 @@ const title = document.getElementById("hello"); 는 같은 일을 함
   ```
 
 - window event listener도 다양하게 존재
+
+## CSS in Javascript
+
+ex) 코드 더 깔끔하게
+
+```javascript
+const h1 = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() {
+  if (h1.style.color === "blue") {
+    h1.style.color = "lightblue";
+  } else {
+    h1.style.color = "blue";
+  }
+}
+
+h1.addEventListener("click", handleTitleClick);
+```
+
+↓
+
+```javascript
+const h1 = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() {
+  const currentColor = h1.style.color;
+  let newColor;
+  if (currentColor === "blue") {
+    newColor = "lightblue";
+  } else {
+    newColor = "blue";
+  }
+  h1.style.color = newColor;
+}
+
+h1.addEventListener("click", handleTitleClick);
+```
+
+- css에서 ._classname_ 에 색깔 등의 무언가를 할당 후 이 class를 어떤 element에 지정하면 element는 할당 된 스타일을 가짐
+  ex)
+
+```css
+body {
+  background-color: lemonchiffon;
+}
+h1 {
+  color: cornflowerblue;
+  transition: color 0.5s ease-in-out;
+}
+
+.active {
+  color: slateblue;
+}
+```
+
+```javascript
+const h1 = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() {
+  if (h1.className === "active") {
+    h1.className = "";
+  } else {
+    h1.className = "active";
+  }
+}
+
+h1.addEventListener("click", handleTitleClick);
+```
+
+위 예시의 active처럼 raw string을 반복해서 쓰는 경우 오타같은 에러 자주 남 -> 안좋은 코드
+-> 그냥 constant 해주는게 좋음
+ex)
+
+```javascript
+const h1 = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() {
+  const activeClass = "active";
+  if (h1.className === activeClass) {
+    h1.className = "";
+  } else {
+    h1.className = activeClass;
+  }
+}
+
+h1.addEventListener("click", handleTitleClick);
+```
+
+- 기존에 쓴 class name을 유지하려면 js로 class name 변경하는건 좋지않음 -> 일 많아짐
