@@ -214,3 +214,40 @@ h1.addEventListener("click", handleTitleClick);
 ```
 
 - 기존에 쓴 class name을 유지하려면 js로 class name 변경하는건 좋지않음 -> 일 많아짐
+  ↓
+  classList 사용
+
+  - class들의 목록으로 작업 가능
+    (className은 이전 class들과 상관 없이 모든 것을 교체해버림)
+  - classList만의 다양한 function이 또 존재
+    ex) classList.contains : 명시한 class가 HTML element의 class에 포함되어 있는지 알려줌
+
+  ex)
+
+  ```javascript
+  const h1 = document.querySelector("div.hello:first-child h1");
+
+  function handleTitleClick() {
+    const activeClass = "active";
+    if (h1.classList.contains(activeClass)) {
+      h1.classList.remove(activeClass);
+    } else {
+      h1.classList.add(activeClass);
+    }
+  }
+  h1.addEventListener("click", handleTitleClick);
+  ```
+
+  ↓
+  toggle function으로 한 번에 구현 가능
+  ex)
+
+  ```javascript
+  const h1 = document.querySelector("div.hello:first-child h1");
+
+  function handleTitleClick() {
+    h1.classList.toggle("active");
+  }
+
+  h1.addEventListener("click", handleTitleClick);
+  ```
