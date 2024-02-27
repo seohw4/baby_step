@@ -77,10 +77,11 @@ function loginButtonClick() {
 loginButton.addEventListener("click", loginButtonClick);
 ```
 
-username을 입력하고 버튼을 눌렀을 때 페이지가 새로고침 됨  
-→ input안에 있는 button을 누르거나 type이 submit인 input을 눌렀을 때 input이 더 존재하지 않는다면 자동으로 form이 submit되기 때문  
-→ button 안누르고 그냥 enter쳐도 submit 됨  
-→→ 결국 button을 clink하는 행위가 의미 없어졌다는 말
+- **form의 기본 동작은 submit**  
+  ⇢ username을 입력하고 버튼을 눌렀을 때 페이지가 새로고침 됨  
+  → input안에 있는 button을 누르거나 type이 submit인 input을 눌렀을 때 input이 더 존재하지 않는다면 자동으로 form이 submit되기 때문  
+  → button 안누르고 그냥 enter쳐도 submit 됨  
+  →→ 결국 button을 clink하는 행위가 의미 없어졌다는 말
 
 - function 뒤에 ()붙이면 브라우저가 보자마자 function을 바로 실행시킴  
   → addEventListener 사용할땐 ()없어야 지정한 이벤트가 발생했을 때만 브라우저가 해댕 function 실행시킴
@@ -97,3 +98,22 @@ function loginSubmit(event) {
 
 loginForm.addEventListener("submit", loginSubmit);
 ```
+
+- link의 기본 동작은 클릭 시 다른 페이지로 이동
+- 일반적으로 string만 포함된 변수는 대문자로 표기하고 string을 저장하고싶을 때 사용
+
+- string과 변수를 합치는 두 방법
+
+```javascript
+"Hello " + username;
+```
+
+```javascript
+`Hello ${username}`;
+```
+
+- localStorage는 브라우저에 정보를 저장할 수 있게 함
+
+### clock
+
+- padStart(앞에 추가할 공간 수, 채울 숫자) 로 string 길이 추가 가능
