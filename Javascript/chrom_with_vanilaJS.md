@@ -117,3 +117,13 @@ loginForm.addEventListener("submit", loginSubmit);
 ### clock
 
 - padStart(앞에 추가할 공간 수, 채울 숫자) 로 string 길이 추가 가능
+
+### quote
+
+- Math.random() 은 0에서 1사이 숫자를 랜덤으로 줌
+
+- Math.round() 는 반올림, Math.ceil() 는 올림, Math.floor() 는 내림 해줌
+
+- [ , , ,].length 하면 array길이를 반환
+
+- document.body.appendChild() 는 body에 html 추가
