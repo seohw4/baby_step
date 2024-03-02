@@ -127,3 +127,19 @@ loginForm.addEventListener("submit", loginSubmit);
 - [ , , ,].length 하면 array길이를 반환
 
 - document.body.appendChild() 는 body에 html 추가
+
+```javascript
+const bgImage = document.createElement("img");
+
+bgImage.src = `img/${chosenImage}`;
+
+document.body.appendChild(bgImage);
+```
+
+는
+
+```html
+<img src="" />
+```
+
+와 같은 역할
