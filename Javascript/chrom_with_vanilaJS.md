@@ -143,3 +143,7 @@ document.body.appendChild(bgImage);
 ```
 
 와 같은 역할
+
+### To do list
+
+- JSON.stringify()는 js의 object나 array, 또는 어떤 js 코드든 string으로 만들어줌
