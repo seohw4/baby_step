@@ -147,3 +147,23 @@ document.body.appendChild(bgImage);
 ### To do list
 
 - JSON.stringify()는 js의 object나 array, 또는 어떤 js 코드든 string으로 만들어줌
+
+- JSON.parse("[ , , , ]")는 js가 이해할 수 있는 array로 만들어줌
+
+- _arrayname_.forEach()는 array에 있는 각각의 item에 대해 function을 실행하게 해줌
+
+```javascript
+function sayHello(item) {
+  console.log("this is the turn of", item);
+}
+
+parsedToDos.forEach(sayHello);
+```
+
+와
+
+```javascript
+parsedToDos.forEach((item) => console.log("this is the turn of", item)
+```
+
+는 동일한 기능 -> 후자는 arrow function으로, function을 짧게 쓰는 법
