@@ -148,7 +148,8 @@ document.body.appendChild(bgImage);
 
 - JSON.stringify()는 js의 object나 array, 또는 어떤 js 코드든 string으로 만들어줌
 
-- JSON.parse("[ , , , ]")는 js가 이해할 수 있는 array로 만들어줌
+- JSON.parse("[ , , , ]")는 js가 이해할 수 있는 array로 만들어줌  
+  -> JSON.parse 자체는 문자열의 구문을 분석하여 js값이나 객체를 생성함
 
 - _arrayname_.forEach()는 array에 있는 각각의 item에 대해 function을 실행하게 해줌
 
